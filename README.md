@@ -1,41 +1,38 @@
-# Bootcamp - Session 1: Introduction and Thinking Differently
+# Bootcamp - Session 2: Migration Metholodogy
 
 ## Pre-Work
-
-1). Read this article on development differences between Cloud Service and On-Prem/AMS:  [Differences in Developing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing).
-
-6). Download and setup an AEM 6.4 author instance, including Java 8 and Maven. [Download AEM 6.4](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
-
-7). Clone the legacy Customer Code Repository available in the wknd-legacy branch [WKND Legacy Customer Code](https://github.com/adobe/aem-cloud-engineering-video-series-exercises).
-
-8). Install the legacy customer code on your local AEM 6.4 environment using Maven.
-
-9). Optional: Setup Github Desktop [Download GitHub Desktop](http://desktop.github.com).
-
-## Cloud Acceleration Bootcamp - Topics covered Session 1: Introduction and Prep Work
-
-### Overview of Cloud Service
-
-Review of the benefits and differences of AEM as a Cloud Service versus on-prem and managed services. 
-
-### Architecture of AEM as a Cloud Service
-
-This section will provide baseline guidance for existing AEM customers to get ready and onboard for an AEM as a Cloud Service project.
-
-### Thinking Differently
-
-Cloud Service is different than other versions of AEM. In this section, these differences will be reviewed. 
-
-### Mutable versus Immutable
-
-Understanding the differences here are important to the success of any Cloud Service implementation. 
-
-
-## Cloud Acceleration Bootcamp - Homework Session 1
 
 1). Install the BPA using Package Manager. Run the BPA on the WKND Legacy Site using AEM 6.4 [Download BPA](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
 
 2). Examine the BPA report.
 
 3). Review this video to understand package structure  [Package Structure](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/repository-structure-package.html?lang=en#developing). 
+
+## Bootcamp - Topics covered in Session 2: Best Practices and Modernization Tools
+
+### Review BPA Report
+
+This section will review the codes identified in the BPA report, and best practices for modernizing a project will be discussed. 
+
+### Using the Cloud Acceleration Manager
+
+Understanding how the Cloud Acceleration Manager (CAM) can speed up an implementation in addition to a demo and understanding the benefits.
+
+### Discussion about Package Structure
+
+This section will discuss the differences in terms of how packages are created and used in AEM. 
+
+### The Repository Modernization tool and Maven considerations 
+
+This session will cover how the repository modernization tool can speed up a migration project, as well as the manual changes that will need to be done. 
+
+##  Cloud Acceleration Bootcamp - Session 2 Homework
+
+1). Review the modernization tooling documentation [Modernization tooling documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/aem-modernization-tools.html?lang=en#introduction). 
+
+2). Review this lab to understand additional modernization tasks [Modernization lab](https://expleague.azureedge.net/labs/L761/index.html). 
+
+3). Run the Repository Modernizer tool on the WKND Legacy project and attempt to fix the artifact issues so the modernized project will compile on 6.4. In addition, fix the run-mode issue referenced in the BPA. 
+
+4). Review the admin console documentation  [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#aem-configuration). 
 
