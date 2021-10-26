@@ -1,53 +1,126 @@
-# Bootcamp Session 4: Cloud Manager, Develop and Deploy
+# Cloud Acceleration Bootcamp - Session 9 Assets and Microservices
 
-## Pre-work
+## Pre-Work
 
-1). Deploy the newly modernized site on the local SDK. 
+1. Review https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#changes-in-aem-as-a-cloud-service to understand changes related to indexes in AEM as a Cloud Service
 
-2). Configure the Admin console and explore cloud manager. 
+2. Clone https://git.corp.adobe.com/rekawek/new-index-playground GIT Repository.
 
-## Cloud Acceleration Bootcamp -Session 4, Topics Covered
+3. Copy /new-index-content/src/main/content/jcr_root/_oak_index folder to the Cloud Manager GIT Project
 
-Deploy the newly modernized WKND Legacy site to the Cloud Ready SDK. 
+4. Modify the filter.xml to include the _oak_index folder
 
-### Cloud Manager Overview
+5. Add <allowIndexDefinitions>true</allowIndexDefinitions> to filevault-package-maven-plugin plugin configuration in Parent pom.xml.
 
-This section will cover the differences between Cloud Service and AMS Cloud Manager. Attendees will understand what is automated, what is not, and what is coming. 
-
-### Programs
-
-This section will cover the differences between sandbox and production programs.
-
-### Using the Cloud Manager GIT
-
-This section will cover how to access, clone and commit to the Cloud Manager GIT repo. 
-
-### Deployment and Code Quality Pipelines
-
-This session will allow for discussion of the SonarQube Code quality rules. 
-
-### Onboarding a Project using Cloud Manager
-
-This section will provide a demo of onboarding a project to AEM as a Cloud Service using Cloud Manager. APIs, Cloud Service Migration using the AIO tool will also be covered. 
-
-### Cloud Manager Self Service Capabilities
-
-This session will provide an understanding of self service capabilities including environment setup, GIT accesss, KPIs, SSL cert, domain management as well as the IP allow test. Selenium testing and Google lighthouse will be addressed as well. 
-
-
-# Cloud Acceleration Bootcamp - Session 4 Homework
-
-1). Onboard the WKND-legacy project code using Cloud Manager
-
-2). Trigger a pipeline execution using the CM AIO Plugin. [Cloud Manager Plugin for the Adobe IO CLI](https://github.com/adobe/aem-enablement/tree/master/AEMAsACloudService/11_CloudManager_AIO). 
-
-3). Install the dispatcher SDK on your local system.  [Dispatcher SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
-
-4). Install the AIO-CLI-aem-cloud-service-migration plugin [Migration Plugin](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) 
+6. Do a local maven build and deploy.
 
 
 
 
+## Bootcamp: Topics covered in Session 9: Assets and Microservices
+
+Homework review: <br>
+Verify new index definitions are correctly deployed and being used by search queries.<br>
+Introduction <br>
+Overview<br>
+High level Architecture <br>
+What's new and notable changes<br>
+Asset Processing Options <br>
+Standard processing profiles<br>
+Custom processing profiles with project firefly<br>
+Post Processing Workflows <br>
+Asset Ingestion Use cases <br>
+aem-upload tool <br>
+aio-cli aem-upload plugin <br>
+Asset bulk ingestor tool<br>
+Session homework<br>
+Create standard and custom processing profiles<br>
+Create and utilize Asset post processing workflows<br>
+Use asset ingestion tools<br>
+
+
+
+# Cloud Acceleration Bootcamp - Session 9 Homework
+
+In this scenario, we will define a custom processing profile and apply it to an AEM assets folder.
+
+1. Navigate to Tools > Assets > Processing Profiles
+
+ > ![1.PNG](./images/1.png)
+ 
+2. Click 'Create'
+
+3. Provide a name for the new profile.
+
+4. Create a custom rendition for png and jpg.
+
+  Set the appropriate height and width.
+
+> ![5.PNG](./images/5.png)
+
+5. 'Save'
+
+6. Select Profile and use the Apply Profile to Folder(s) wizard.
+
+> ![8.PNG](./images/8.png)
+
+7. You can also Assign/Remove Processing Profile to folder via folder properties page, to do so
+
+  > Navigate to the desired folder <br>
+
+Select folder and click the "Properties" button in the Action Bar
+
+> ![9.PNG](./images/9.png)
+
+Select Processing Profile from "Processing Profiles" tab
+
+ ![10.PNG](./images/10.png)<br>
+ 
+8. Upload an asset to the folder.
+
+9. Verify the custom renditions being generated.
+
+#### Usage of Asset Upload Tool
+
+This library supports uploading files to a target instance, while providing support for monitoring transfer progress, cancelling transfers, and other features.
+
+To install the and use the command locally
+
+> ``` npm install -g @adobe/aio-cli-plugin-aem ```
+
+> ```  aio-aem (-v|--version|version) ```
+
+> ``` aio-aem --help ```
+
+#### Upload asset binaries to AEM
+
+1. Navigate to AEM as a Cloud Service Instance.
+
+2. Go to Tools > Security > Users
+
+3. Create a new user, set his password and set user group to `administrators`.
+
+4. Download these images (or use your own) [Demo_Images.zip](https://git.corp.adobe.com/aem-enablement/CloudAccelerationBootcamp/tree/session9/images)
+
+5. Open command prompt/terminal
+
+6. Run the following command
+    > aio-aem aem:upload path_to_Demo_Images_folder -h <AEM as Cloud Service Instance URL> -c username:password
+
+    e.g.
+    > aio-aem aem:upload Demo_Images -h https://author-p9357-e17906.adobeaemcloud.com -c ksaner:password
+
+7. Following output should be displayed on the terminal window
+
+    > ![2.PNG](./images/two.png)
+
+    > Verify the uploadURIs pointing to azure blob storage
+
+    > ![3.PNG](./images/four.png)
+    
+8. Go to Assets > Files > aem-upload-xxxxx and verify the uploaded assets
+
+    > ![3.PNG](./images/three.png)
 
 
 
