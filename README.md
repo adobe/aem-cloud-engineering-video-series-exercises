@@ -1,49 +1,102 @@
-# Bootcamp Session 4: Cloud Manager, Develop and Deploy
+# Cloud Acceleration Bootcamp - Session 5: Dispatcher
 
-## Pre-work
+## Pre-Work
 
-1). Deploy the newly modernized site on the local SDK. 
+1). Onboard the project code to AEM as a Cloud Service.
 
-2). Configure the Admin console and explore cloud manager. 
+2). Trigger a pipeline execution using the CM AIO plugin.
 
-## Cloud Acceleration Bootcamp -Session 4, Topics Covered
+3). Install the Dispatcher SDK on your local machine.
 
-Deploy the newly modernized WKND Legacy site to the Cloud Ready SDK. 
+4). Be sure Docker installed on your system.
 
-### Cloud Manager Overview
-
-This section will cover the differences between Cloud Service and AMS Cloud Manager. Attendees will understand what is automated, what is not, and what is coming. 
-
-### Programs
-
-This section will cover the differences between sandbox and production programs.
-
-### Using the Cloud Manager GIT
-
-This section will cover how to access, clone and commit to the Cloud Manager GIT repo. 
-
-### Deployment and Code Quality Pipelines
-
-This session will allow for discussion of the SonarQube Code quality rules. 
-
-### Onboarding a Project using Cloud Manager
-
-This section will provide a demo of onboarding a project to AEM as a Cloud Service using Cloud Manager. APIs, Cloud Service Migration using the AIO tool will also be covered. 
-
-### Cloud Manager Self Service Capabilities
-
-This session will provide an understanding of self service capabilities including environment setup, GIT accesss, KPIs, SSL cert, domain management as well as the IP allow test. Selenium testing and Google lighthouse will be addressed as well. 
+5). Install the aio-cli-plugin-aem-cloud-service-migration plugin.
 
 
-# Cloud Acceleration Bootcamp - Session 4 Homework
+## Bootcamp: Topics covered in Session 5: Dispatcher
 
-1). Onboard the WKND-legacy project code using Cloud Manager
+### Notable Changes to the Dispatcher in AEM as a Cloud Service
 
-2). Trigger a pipeline execution using the CM AIO Plugin. [Cloud Manager Plugin for the Adobe IO CLI](https://github.com/adobe/aem-enablement/tree/master/AEMAsACloudService/11_CloudManager_AIO). 
+This section will cover the changes in the Cloud Service Dispatcher, and tips and tricks for making the transition smoother. 
 
-3). Install the dispatcher SDK on your local system.  [Dispatcher SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
+### How the Dispatcher Converter tool works
 
-4). Install the AIO-CLI-aem-cloud-service-migration plugin [Migration Plugin](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) 
+This section will cover the why of the Dispatcher tool, and how to use it. 
+
+### Transforming a legacy Dispatcher configuration using the tool
+
+This session will demo how to use the Dispatcher tool to convert a stock AMS Dispatcher configuration to Cloud Service. 
+
+### Test the Dispatcher Configuration using the Dispatcher SDK 
+
+This section will show how to test your Dispatcher configuration using the Dispatcher SDK.
+
+### Deploy the Dispatcher Configuration on a Cloud Service sandbox
+
+This session will demo how to deploy the Dispatcher configuration on a sandbox.
+
+### Troubleshooting Tips & Tricks
+
+This session will feature a consultant who can talk about some real world Dispatcher migration tactics. 
+
+
+# Cloud Acceleration Bootcamp - Session 5 Homework
+
+1). Transform the legacy AMS Dispatcher configuration using the Dispatcher tool. Configuration is available here: [Default AMS dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+
+2). Deploy this configuration on the Dispatcher SDK to test. 
+
+### Step 1. Setting up Docker locally
+
+1. Navigate to (Docker Hub)[https://hub.docker.com/signup] and Sign up for a Docker ID
+2. Download and Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg) or for [Windows](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
+3. Sign in to your Local Docker Instance.
+
+### Step 2. Setup the Dispatcher SDK Validator
+
+1. Unzip the downloaded aem-sdk-XXX.zip file
+2. Unpack the Dispatcher Tools into ~/aem-sdk/dispatcher
+    > ` Windows `: Unzip aem-sdk-dispatcher-tools-2.0.20-windows.zip into C:\Users\<My User>\aem-sdk\dispatcher (creating missing folders as needed) <br><br>
+
+    > ` macOS `: Execute the accompanying shell script aem-sdk-dispatcher-tools-2.0.20-unix.sh to unpack the Dispatcher Tools
+    
+     > ``` chmod a+x aem-sdk-dispatcher-tools-2.0.20-unix.sh && ./aem-sdk-dispatcher-tools-2.0.20-unix.sh ```
+
+
+### Step 3. Run the Dispatcher SDK Validator
+1. Navigate to the ` dispatcher-sdk-2.0.20 ` folder
+2. Run the following commands: <br>
+`For Windows`<br>
+    > `bin\validator full -d out src` <br>
+
+    `For Mac`<br>
+    > `./bin/validator full -d ./out ./src`
+---
+> The validation is dual purpose:<br>
+
+>    `Validates the Apache HTTP Web server and Dispatcher configuration files for correctness.`<br>
+
+>    `Transpiles the configurations into a file-set compatible with the Docker container's Apache HTTP Web Server.`
+
+### Step 4. Run the Dispatcher SDK using Docker
+
+> `Once validated, the transpiled configurations are used run Dispatcher locally in the Docker container. It is important to ensure the latest configurations have been validated and output using the validator's -d option.`
+
+
+1. Start AEM Publish server on Port 4503.
+2. Run the following commands: <br>
+`For Windows`<br>
+    > `bin\docker_run out host.docker.internal:4503 8080` <br>
+
+    `For Mac`<br>
+    > `./bin/docker_run.sh ./out docker.for.mac.localhost:4503 8080`
+
+3. Be sure the Apache Server is started on Port 8080. 
+
+4. In the browser window, navigate to http://localhost:8080
+    
+5. Onboard the WKND-legacy project code with the validated Dispatcher using Cloud Manager. Troubleshoot if needed. 
+
 
 
 
