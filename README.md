@@ -38,7 +38,8 @@ This session will show how to transfer content from an on-prem installation to C
 
 1). Download and Install the [Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
-2). Transfer content from your AEM 6.4 to the sandbox [Assets Here](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent/assets)
+2). Transfer content from your AEM 6.4 to the sandbox [Assets Here](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent/assets) using the Content Transfer Tool (CTT).
+
 
 
 
