@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/wknd">
+        <exclude pattern="/apps/wknd/install" />
+    </filter>
+    <filter root="/apps/sling" />
+    <filter root="/libs/cq/core/content/nav/wknd"/>
+    <filter root="/oak:index/damAssetLucene"/>
+    <filter root="/oak:index/wkndId"/>
+    <filter root="/oak:index/wkndTerminationDate"/>
+</workspaceFilter>
