@@ -1,51 +1,33 @@
-# Cloud Acceleration Bootcamp - Session 6: Content
-
-## Pre-Work
-
-1). Transform legacy dispatcher configuration using Dispatcher Convertor
-
-2). Deploy Dispatcher Configuration on Dispatcher SDK
-
-3). Deploy Dispatcher Configuration on AEM CS Sandbox
-
-4). Perform basic troubleshooting for dispatcher issues.
+# Cloud Acceleration Bootcamp - Session 7 Search and Indexing
 
 
-## Bootcamp: Topics covered in Session 6: Content Migration
-
-### Features, Pre-reqs and support
-
-This section will cover features, pre-reqs and support of the Content Transfer Tool (CTT).
-
-### Use Cases for Content Migration
-
-This section will cover the CTT, Package Manager, limitations on size, mutable versus immutable, author only and demos. 
-
-### Demo of Content Migration Tool (CTT). 
-
-This section will demonstrate how to use the CTT
-
-### Demo of Bulk Import Service
-
-This section will show demo how to use the bulk import service. 
-
-### Transfer Content from AEM 6.4 to Cloud Service
-
-This session will show how to transfer content from an on-prem installation to Cloud Service
+## Bootcamp: Topics covered in Session 7: Search and Indexing
 
 
-# Cloud Acceleration Bootcamp - Session 6 Homework
+### Review Notable Changes
 
-1). Download and Install the [Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
+This section will cover the notable changes from legacy indexes in AEM as a Cloud Service
 
-2). Transfer content from your AEM 6.4 to the sandbox [Assets Here](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent/assets) using the Content Transfer Tool (CTT).
+### Transform Legacy Indexes using the Index Converter
 
+This section will cover the index converter tool and how to use it with legacy indexes. 
 
+### Transform Legacy Indexes using the Index Converter
 
+This section will cover how to deploy newly created OAK indexed to AEM as a Cloud Service. 
 
+### Troubleshooting Tips/Real World Scenarios
 
+This section will cover troubleshooting tips and a deep diver scenario into some real world use cases. 
 
+# Cloud Acceleration Bootcamp - Session 8 Homework
 
-
+1. Review https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#changes-in-aem-as-a-cloud-service to understand changes related to indexes in AEM as a Cloud Service
+2. Clone https://git.corp.adobe.com/rekawek/new-index-playground GIT Repository.
+3. Copy ` /new-index-content/src/main/content/jcr_root/_oak_index ` folder to the Cloud Manager GIT Project
+4. Modify the ` filter.xml ` to include the ` _oak_index ` folder
+5. Add ` <allowIndexDefinitions>true</allowIndexDefinitions> ` to ` filevault-package-maven-plugin ` plugin configuration in Parent `pom.xml`.
+6. Do a local maven build and deploy.
+7. Commit the new code with index definitions to Cloud Manager Git.
 
 
