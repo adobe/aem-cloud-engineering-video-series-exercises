@@ -8,7 +8,7 @@
 
 ## Cloud Acceleration Bootcamp -Session 4, Topics Covered
 
-ernized WKND Legacy site to the Cloud Ready SDK. 
+Deploy the newly modernized WKND Legacy site to the Cloud Ready SDK. 
 
 ### Cloud Manager Overview
 
