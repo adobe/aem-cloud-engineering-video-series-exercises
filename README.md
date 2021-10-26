@@ -14,25 +14,22 @@
 
 ## Cloud Acceleration Bootcamp - Topics covered Session 1: Introduction and Prep Work
 
-### Homework Review
+### Overview of Cloud Service
 
-Quick review to insure that the environment has been set up correctly, and everyone has access to the project code. 
+Review of the benefits and differences of AEM as a Cloud Service versus on-prem and managed services. 
 
-### Assessing an AEM as a Cloud Service Project
+### Architecture of AEM as a Cloud Service
 
 This section will provide baseline guidance for existing AEM customers to get ready and onboard for an AEM as a Cloud Service project.
 
-### Overview of the Differences in Coding for AEM as a Cloud Service Project
+### Thinking Differently
 
-Cloud Service is less forgiving of bad code. In this section, coding best practices and gotchas will be discussed. 
+Cloud Service is different than other versions of AEM. In this section, these differences will be reviewed. 
 
-### Why use the Best Practices Analyzer
+### Mutable versus Immutable
 
-This section will provide an overview of why the best practices analyzer was developed. 
+Understanding the differences here are important to the success of any Cloud Service implementation. 
 
-### Using the Best Practices Analyzer
-
-The BPA analyzer will be shown and a discussion of the content of the report will be discussed. 
 
 ## Cloud Acceleration Bootcamp - Homework Session 1
 
