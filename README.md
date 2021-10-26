@@ -1,18 +1,47 @@
-# Adobe Experience Manager Best Practice Analyzer code examples
+# Bootcamp - Session 3: On-Boarding
 
-This project is intended to illustrate example conditions identified by Adobe's Best Practice Analyzer (BPA) and how they can be remediated.
+## Pre-work
 
-Please not that this Git repository contains a project rife with bad practices and incompatible code and configuration. These violations are used to illustrate a starting condition which can then be juxtaposed against the remediation for specific Best Practice Analyzer codes, broken out by Git branches.
+1). Review the modernization tooling documentation [Modernization tooling documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/aem-modernization-tools.html?lang=en#introduction). 
 
-## Legacy branch 
+2). Review this lab to understand additional modernization tasks [Modernization lab](https://expleague.azureedge.net/labs/L761/index.html). 
 
-This branch is the starting point generated for Adobe's Maven Project Archetype 10 with several violations intentionally added.
+3). Run the Repository Modernizer tool on the WKND Legacy project and attempt to fix the artifact issues so the modernized project will compile on 6.4. In addition, fix the run-mode issue referenced in the BPA. 
 
-## Best Practice Analyzer code branches
+5). Review the admin console documentation  [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#aem-configuration). 
 
-Adobe Best Practice Analyzer reports violations by [code](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html), and each code provides details about what the violation is, and how to resolve it.
+# Cloud Acceleration Bootcamp - Session 3: Onboarding
 
-For violations this project's `main` Git branch a corresponding Git branch, in the format `code/<bpa code>` contains the changes required for resolve that, and only that, violation.
+## Topics Covered
 
-Performing a Github.com Compare between the `main` and `code/<bpa code>` provides a clear view of the changes required to mitigate the violation.
+### Contract, Provisioning and E-Mails
+
+This section will cover the contract provisions for AEM as a Cloud Service.
+
+### Onboarding Calls
+
+This section will provide an understanding of what to expect in an onboarding call.
+
+### Terminology
+
+This section will provide an overview of the terminology that partners should be familiar with in understanding AEM as a Cloud Service. 
+
+
+### Using the Admin Console 
+
+This session will cover the admin console and IDP as well as the roles needed for access in AEM as a Cloud Service. 
+
+### Cloud Manager for Self Service Programs and Environment Creation
+
+This session will cover Cloud Manager and how to use self service programs as well as environment creation. 
+
+
+# Cloud Acceleration Bootcamp - Session 3 Homework
+
+1). Deploy the newly modernized wknd-legacy site on the local Cloud Service SDK. Available to download here: 
+
+[Software Distribution Portal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm). 
+
+2). Configure the Admin console and explore cloud manager. 
+
 
