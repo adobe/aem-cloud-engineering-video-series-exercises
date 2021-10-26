@@ -38,9 +38,9 @@ This session will cover Cloud Manager and how to use self service programs as we
 
 # Cloud Acceleration Bootcamp - Session 3 Homework
 
-1). Deploy the newly modernized wknd-legacy site on the local SDK. Available to download here: [Software Distribution Portal] (https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+1). Deploy the newly modernized wknd-legacy site on the local SDK. Available to download here: 
 
-
+[Software Distribution Portal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm). 
 
 2). Configure the Admin console and explore cloud manager. 
 
