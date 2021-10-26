@@ -1,0 +1,10 @@
+{
+  "id":"${project.groupId}:${project.artifactId}:slingosgifeature:application:${project.version}",
+  "bundles":[
+  ],
+  "configurations":{
+  },
+  "content-packages:ARTIFACTS|true":[
+    "com.adobe.granite:new-index-content:zip:1.0.0-SNAPSHOT"
+  ]
+}

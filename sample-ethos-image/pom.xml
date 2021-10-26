@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!--
+/*************************************************************************
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2017 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ **************************************************************************/
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.adobe.granite</groupId>
+        <artifactId>parent</artifactId>
+        <version>114</version>
+        <relativePath />
+    </parent>
+
+    <artifactId>sample-ethos-image</artifactId>
+    <packaging>slingosgifeature</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <docker.registry>docker2-granite-release-local.dr-uw2.adobeitc.com</docker.registry>
+
+        <content_mode>author</content_mode>
+	<precompile_clientlibs>false</precompile_clientlibs>
+
+        <!-- the base image to be used -->
+        <base.image.name>aem-ethos/aem</base.image.name>
+        <base.image.tag>snapshot</base.image.tag>
+
+        <!-- the image that will be created -->
+        <docker.image.name>sample/${content_mode}</docker.image.name>
+        <docker.image.tag>snapshot</docker.image.tag>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-docker-root</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/container</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/docker/container</directory>
+                                    <filtering>false</filtering>
+                                    <excludes>
+                                        <exclude>**/models*/*.ref</exclude>
+                                    </excludes>
+                                </resource>
+                                <resource>
+                                    <directory>src/main/docker/container</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>**/models*/*.ref</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>slingfeature-maven-plugin</artifactId>
+                <version>0.8.1-T20190203165900-7d8da65</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>process-local-features</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>repository</goal>
+                        </goals>
+                        <configuration>
+                            <repositoryDir>container/root/opt/aem/launcher-img/cache</repositoryDir>
+                            <usePomVariables>true</usePomVariables>
+                            <expandContentPackages>false</expandContentPackages>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.10</version>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>push</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <repository>${docker.registry}/${docker.image.name}</repository>
+                    <tag>${docker.image.tag}</tag>
+                    <buildArgs>
+                        <aem_base>${docker.registry}/${base.image.name}:${base.image.tag}</aem_base>
+			<content_mode>${content_mode}</content_mode>
+			<precompile_clientlibs>${precompile_clientlibs}</precompile_clientlibs>
+                    </buildArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
