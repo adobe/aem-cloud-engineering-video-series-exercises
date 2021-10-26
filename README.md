@@ -11,10 +11,6 @@
 
 ## Bootcamp: Topics covered in Session 6: Content Migration
 
-### Homework Review
-
-Review of dispatcher homework.
-
 ### Features, Pre-reqs and support
 
 This section will cover features, pre-reqs and support of the Content Transfer Tool (CTT).
