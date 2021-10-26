@@ -1,101 +1,47 @@
-# Cloud Acceleration Bootcamp - Session 5: Dispatcher
-
 ## Pre-Work
 
-1). Onboard the project code to AEM as a Cloud Service.
+1). Transform legacy dispatcher configuration using Dispatcher Convertor
 
-2). Trigger a pipeline execution using the CM AIO plugin.
+2). Deploy Dispatcher Configuration on Dispatcher SDK
 
-3). Install the Dispatcher SDK on your local machine.
+3). Deploy Dispatcher Configuration on AEM CS Sandbox
 
-4). Be sure Docker installed on your system.
-
-5). Install the aio-cli-plugin-aem-cloud-service-migration plugin.
+4). Perform basic troubleshooting for dispatcher issues.
 
 
-## Bootcamp: Topics covered in Session 5: Dispatcher
+## Bootcamp: Topics covered in Session 6: Content Migration
 
-### Notable Changes to the Dispatcher in AEM as a Cloud Service
+### Homework Review
 
-This section will cover the changes in the Cloud Service Dispatcher, and tips and tricks for making the transition smoother. 
+Review of dispatcher homework.
 
-### How the Dispatcher Converter tool works
+### Features, Pre-reqs and support
 
-This section will cover the why of the Dispatcher tool, and how to use it. 
+This section will cover features, pre-reqs and support of the Content Transfer Tool (CTT).
 
-### Transforming a legacy Dispatcher configuration using the tool
+### Use Cases for Content Migration
 
-This session will demo how to use the Dispatcher tool to convert a stock AMS Dispatcher configuration to Cloud Service. 
+This section will cover the CTT, Package Manager, limitations on size, mutable versus immutable, author only and demos. 
 
-### Test the Dispatcher Configuration using the Dispatcher SDK 
+### Demo of Content Migration Tool (CTT). 
 
-This section will show how to test your Dispatcher configuration using the Dispatcher SDK.
+This section will demonstrate how to use the CTT
 
-### Deploy the Dispatcher Configuration on a Cloud Service sandbox
+### Demo of Bulk Import Service
 
-This session will demo how to deploy the Dispatcher configuration on a sandbox.
+This section will show demo how to use the bulk import service. 
 
-### Troubleshooting Tips & Tricks
+### Transfer Content from AEM 6.4 to Cloud Service
 
-This session will feature a consultant who can talk about some real world Dispatcher migration tactics. 
-
-
-# Cloud Acceleration Bootcamp - Session 5 Homework
-
-1). Transform the legacy AMS Dispatcher configuration using the Dispatcher tool. Configuration is available here: [Default AMS dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
-
-2). Deploy this configuration on the Dispatcher SDK to test. 
-
-### Step 1. Setting up Docker locally
-
-1. Navigate to (Docker Hub)[https://hub.docker.com/signup] and Sign up for a Docker ID
-2. Download and Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg) or for [Windows](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
-3. Sign in to your Local Docker Instance.
-
-### Step 2. Setup the Dispatcher SDK Validator
-
-1. Unzip the downloaded aem-sdk-XXX.zip file
-2. Unpack the Dispatcher Tools into ~/aem-sdk/dispatcher
-    > ` Windows `: Unzip aem-sdk-dispatcher-tools-2.0.20-windows.zip into C:\Users\<My User>\aem-sdk\dispatcher (creating missing folders as needed) <br><br>
-
-    > ` macOS `: Execute the accompanying shell script aem-sdk-dispatcher-tools-2.0.20-unix.sh to unpack the Dispatcher Tools
-    
-     > ``` chmod a+x aem-sdk-dispatcher-tools-2.0.20-unix.sh && ./aem-sdk-dispatcher-tools-2.0.20-unix.sh ```
+This session will show how to transfer content from an on-prem installation to Cloud Service
 
 
-### Step 3. Run the Dispatcher SDK Validator
-1. Navigate to the ` dispatcher-sdk-2.0.20 ` folder
-2. Run the following commands: <br>
-`For Windows`<br>
-    > `bin\validator full -d out src` <br>
+# Cloud Acceleration Bootcamp - Session 6 Homework
 
-    `For Mac`<br>
-    > `./bin/validator full -d ./out ./src`
----
-> The validation is dual purpose:<br>
+1). Download and Install the [Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
->    `Validates the Apache HTTP Web server and Dispatcher configuration files for correctness.`<br>
+2). Transfer content from your AEM 6.4 to the sandbox [Assets Here](https://git.corp.adobe.com/aem-enablement/CloudAccelerationBootcamp/tree/session6/assets)
 
->    `Transpiles the configurations into a file-set compatible with the Docker container's Apache HTTP Web Server.`
-
-### Step 4. Run the Dispatcher SDK using Docker
-
-> `Once validated, the transpiled configurations are used run Dispatcher locally in the Docker container. It is important to ensure the latest configurations have been validated and output using the validator's -d option.`
-
-
-1. Start AEM Publish server on Port 4503.
-2. Run the following commands: <br>
-`For Windows`<br>
-    > `bin\docker_run out host.docker.internal:4503 8080` <br>
-
-    `For Mac`<br>
-    > `./bin/docker_run.sh ./out docker.for.mac.localhost:4503 8080`
-
-3. Be sure the Apache Server is started on Port 8080. 
-
-4. In the browser window, navigate to http://localhost:8080
-    
-5. Onboard the WKND-legacy project code with the validated Dispatcher using Cloud Manager. Troubleshoot if needed. 
 
 
 
