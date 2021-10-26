@@ -1,3 +1,5 @@
+# Cloud Acceleration Bootcamp - Session 6: Content
+
 ## Pre-Work
 
 1). Transform legacy dispatcher configuration using Dispatcher Convertor
