@@ -1,23 +1,23 @@
-# Cloud Acceleration Bootcamp - Session 9 Assets and Microservices
+# Cloud Acceleration Bootcamp - Session 8 Assets and Microservices
 
 ## Pre-Work
 
 1. Review https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#changes-in-aem-as-a-cloud-service to understand changes related to indexes in AEM as a Cloud Service
 
-2. Clone https://git.corp.adobe.com/rekawek/new-index-playground GIT Repository.
+2. Clone https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/new-index-content GIT Repository.
 
-3. Copy /new-index-content/src/main/content/jcr_root/_oak_index folder to the Cloud Manager GIT Project
+3. Clone https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/sample-ethos-image GIT Repository
 
-4. Modify the filter.xml to include the _oak_index folder
+4. Copy /new-index-content/src/main/content/jcr_root/_oak_index folder to the Cloud Manager GIT Project
 
-5. Add <allowIndexDefinitions>true</allowIndexDefinitions> to filevault-package-maven-plugin plugin configuration in Parent pom.xml.
+5. Modify the filter.xml to include the _oak_index folder
 
-6. Do a local maven build and deploy.
+6. Add <allowIndexDefinitions>true</allowIndexDefinitions> to filevault-package-maven-plugin plugin configuration in Parent pom.xml.
+
+7. Do a local maven build and deploy.
 
 
-
-
-## Bootcamp: Topics covered in Session 9: Assets and Microservices
+## Bootcamp: Topics covered in Session 8: Assets and Microservices
 
 Homework review: <br>
 Verify new index definitions are correctly deployed and being used by search queries.<br>
@@ -40,7 +40,7 @@ Use asset ingestion tools<br>
 
 
 
-# Cloud Acceleration Bootcamp - Session 9 Homework
+# Cloud Acceleration Bootcamp - Session 8 Homework
 
 In this scenario, we will define a custom processing profile and apply it to an AEM assets folder.
 
