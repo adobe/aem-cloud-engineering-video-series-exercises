@@ -1,47 +1,53 @@
-# Bootcamp - Session 3: On-Boarding
+# Bootcamp Session 4: Cloud Manager, Develop and Deploy
 
 ## Pre-work
 
-1). Review the modernization tooling documentation [Modernization tooling documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/aem-modernization-tools.html?lang=en#introduction). 
-
-2). Review this lab to understand additional modernization tasks [Modernization lab](https://expleague.azureedge.net/labs/L761/index.html). 
-
-3). Run the Repository Modernizer tool on the WKND Legacy project and attempt to fix the artifact issues so the modernized project will compile on 6.4. In addition, fix the run-mode issue referenced in the BPA. 
-
-5). Review the admin console documentation  [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#aem-configuration). 
-
-# Cloud Acceleration Bootcamp - Session 3: Onboarding
-
-## Topics Covered
-
-### Contract, Provisioning and E-Mails
-
-This section will cover the contract provisions for AEM as a Cloud Service.
-
-### Onboarding Calls
-
-This section will provide an understanding of what to expect in an onboarding call.
-
-### Terminology
-
-This section will provide an overview of the terminology that partners should be familiar with in understanding AEM as a Cloud Service. 
-
-
-### Using the Admin Console 
-
-This session will cover the admin console and IDP as well as the roles needed for access in AEM as a Cloud Service. 
-
-### Cloud Manager for Self Service Programs and Environment Creation
-
-This session will cover Cloud Manager and how to use self service programs as well as environment creation. 
-
-
-# Cloud Acceleration Bootcamp - Session 3 Homework
-
-1). Deploy the newly modernized wknd-legacy site on the local Cloud Service SDK. Available to download here: 
-
-[Software Distribution Portal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm). 
+1). Deploy the newly modernized site on the local SDK. 
 
 2). Configure the Admin console and explore cloud manager. 
+
+## Cloud Acceleration Bootcamp -Session 4, Topics Covered
+
+Deploy the newly modernized WKND Legacy site to the Cloud Ready SDK. 
+
+### Cloud Manager Overview
+
+This section will cover the differences between Cloud Service and AMS Cloud Manager. Attendees will understand what is automated, what is not, and what is coming. 
+
+### Programs
+
+This section will cover the differences between sandbox and production programs.
+
+### Using the Cloud Manager GIT
+
+This section will cover how to access, clone and commit to the Cloud Manager GIT repo. 
+
+### Deployment and Code Quality Pipelines
+
+This session will allow for discussion of the SonarQube Code quality rules. 
+
+### Onboarding a Project using Cloud Manager
+
+This section will provide a demo of onboarding a project to AEM as a Cloud Service using Cloud Manager. APIs, Cloud Service Migration using the AIO tool will also be covered. 
+
+### Cloud Manager Self Service Capabilities
+
+This session will provide an understanding of self service capabilities including environment setup, GIT accesss, KPIs, SSL cert, domain management as well as the IP allow test. Selenium testing and Google lighthouse will be addressed as well. 
+
+
+# Cloud Acceleration Bootcamp - Session 4 Homework
+
+1). Onboard the WKND-legacy project code using Cloud Manager
+
+2). Trigger a pipeline execution using the CM AIO Plugin. [Cloud Manager Plugin for the Adobe IO CLI](https://github.com/adobe/aem-enablement/tree/master/AEMAsACloudService/11_CloudManager_AIO). 
+
+3). Install the dispatcher SDK on your local system.  [Dispatcher SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
+
+4). Install the AIO-CLI-aem-cloud-service-migration plugin [Migration Plugin](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) 
+
+
+
+
+
 
 
