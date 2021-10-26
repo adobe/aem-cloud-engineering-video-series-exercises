@@ -1,106 +1,54 @@
-# Cloud Acceleration Bootcamp - Session 5: Dispatcher
+# Sample AEM project template
 
-## Pre-Work
+This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
-1). Onboard the project code to AEM as a Cloud Service.
+## Modules
 
-2). Trigger a pipeline execution using the CM AIO plugin.
+The main parts of the template are:
 
-3). Install the Dispatcher SDK on your local machine.
+* core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
+* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
+* ui.content: contains sample content using the components from the ui.apps
+* ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
+* ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
 
-4). Be sure Docker installed on your system.
+## How to build
 
-5). Install the aio-cli-plugin-aem-cloud-service-migration plugin.
+To build all the modules run in the project root directory the following command with Maven 3:
 
+    mvn clean install
 
-## Bootcamp: Topics covered in Session 5: Dispatcher
+If you have a running AEM instance you can build and package the whole project and deploy into AEM with  
 
-### Notable Changes to the Dispatcher in AEM as a Cloud Service
-
-This section will cover the changes in the Cloud Service Dispatcher, and tips and tricks for making the transition smoother. 
-
-### How the Dispatcher Converter tool works
-
-This section will cover the why of the Dispatcher tool, and how to use it. 
-
-### Transforming a legacy Dispatcher configuration using the tool
-
-This session will demo how to use the Dispatcher tool to convert a stock AMS Dispatcher configuration to Cloud Service. 
-
-### Test the Dispatcher Configuration using the Dispatcher SDK 
-
-This section will show how to test your Dispatcher configuration using the Dispatcher SDK.
-
-### Deploy the Dispatcher Configuration on a Cloud Service sandbox
-
-This session will demo how to deploy the Dispatcher configuration on a sandbox.
-
-### Troubleshooting Tips & Tricks
-
-This session will feature a consultant who can talk about some real world Dispatcher migration tactics. 
-
-
-# Cloud Acceleration Bootcamp - Session 5 Homework
-
-1). Transform the legacy AMS Dispatcher configuration using the Dispatcher tool. Configuration is available here: [Default AMS dispatcher configuration](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
-
-2). Deploy this configuration on the Dispatcher SDK to test. 
-
-### Step 1. Setting up Docker locally
-
-1. Navigate to (Docker Hub)[https://hub.docker.com/signup] and Sign up for a Docker ID
-2. Download and Install [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg) or for [Windows](https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
-3. Sign in to your Local Docker Instance.
-
-### Step 2. Setup the Dispatcher SDK Validator
-
-1. Unzip the downloaded aem-sdk-XXX.zip file
-2. Unpack the Dispatcher Tools into ~/aem-sdk/dispatcher
-    > ` Windows `: Unzip aem-sdk-dispatcher-tools-2.0.20-windows.zip into C:\Users\<My User>\aem-sdk\dispatcher (creating missing folders as needed) <br><br>
-
-    > ` macOS `: Execute the accompanying shell script aem-sdk-dispatcher-tools-2.0.20-unix.sh to unpack the Dispatcher Tools
+    mvn clean install -PautoInstallPackage
     
-     > ``` chmod a+x aem-sdk-dispatcher-tools-2.0.20-unix.sh && ./aem-sdk-dispatcher-tools-2.0.20-unix.sh ```
+Or to deploy it to a publish instance, run
 
-
-### Step 3. Run the Dispatcher SDK Validator
-1. Navigate to the ` dispatcher-sdk-2.0.20 ` folder
-2. Run the following commands: <br>
-`For Windows`<br>
-    > `bin\validator full -d out src` <br>
-
-    `For Mac`<br>
-    > `./bin/validator full -d ./out ./src`
----
-> The validation is dual purpose:<br>
-
->    `Validates the Apache HTTP Web server and Dispatcher configuration files for correctness.`<br>
-
->    `Transpiles the configurations into a file-set compatible with the Docker container's Apache HTTP Web Server.`
-
-### Step 4. Run the Dispatcher SDK using Docker
-
-> `Once validated, the transpiled configurations are used run Dispatcher locally in the Docker container. It is important to ensure the latest configurations have been validated and output using the validator's -d option.`
-
-
-1. Start AEM Publish server on Port 4503.
-2. Run the following commands: <br>
-`For Windows`<br>
-    > `bin\docker_run out host.docker.internal:4503 8080` <br>
-
-    `For Mac`<br>
-    > `./bin/docker_run.sh ./out docker.for.mac.localhost:4503 8080`
-
-3. Be sure the Apache Server is started on Port 8080. 
-
-4. In the browser window, navigate to http://localhost:8080
+    mvn clean install -PautoInstallPackagePublish
     
-5. Onboard the WKND-legacy project code with the validated Dispatcher using Cloud Manager. Troubleshoot if needed. 
+Or to deploy only the bundle to the author, run
+
+    mvn clean install -PautoInstallBundle
+
+## Testing
+
+There are three levels of testing contained in the project:
+
+* unit test in core: this show-cases classic unit testing of the code contained in the bundle. To test, execute:
+
+    mvn clean test
+
+* server-side integration tests: this allows to run unit-like tests in the AEM-environment, ie on the AEM server. To test, execute:
+
+    mvn clean integration-test -PintegrationTests
+
+* client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test:
+
+    in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
 
 
+## Maven settings
 
+The project comes with the auto-public repository configured. To setup the repository in your Maven settings, refer to:
 
-
-
-
-
+    http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
