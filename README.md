@@ -4,13 +4,13 @@
 
 1). Read this article on development differences between Cloud Service and On-Prem/AMS:  [Differences in Developing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing).
 
-6). Download and setup an AEM 6.4 author instance, including Java 8 and Maven. [Download AEM 6.4](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+2). Download and setup an AEM 6.4 author instance, including Java 8 and Maven. [Download AEM 6.4](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
-7). Clone the legacy Customer Code Repository available in the wknd-legacy branch [WKND Legacy Customer Code](https://github.com/adobe/aem-cloud-engineering-video-series-exercises).
+3). Clone the legacy Customer Code Repository available in the wknd-legacy branch [WKND Legacy Customer Code](https://github.com/adobe/aem-cloud-engineering-video-series-exercises).
 
-8). Install the legacy customer code on your local AEM 6.4 environment using Maven.
+4). Install the legacy customer code on your local AEM 6.4 environment using Maven.
 
-9). Optional: Setup Github Desktop [Download GitHub Desktop](http://desktop.github.com).
+5). Optional: Setup Github Desktop [Download GitHub Desktop](http://desktop.github.com).
 
 ## Cloud Acceleration Bootcamp - Topics covered Session 1: Introduction and Prep Work
 
