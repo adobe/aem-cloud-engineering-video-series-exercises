@@ -1,4 +1,4 @@
-# Bootcamp - Session 2: Migration Metholodogy
+# Bootcamp - Session 2: Migration Methodology
 
 ## Pre-Work
 
