@@ -1,6 +1,6 @@
 # Cloud Acceleration Bootcamp - Session 7 Search and Indexing
 
-# Cloud Acceleration Bootcamp - Session 7 Pre-work
+## Cloud Acceleration Bootcamp -  Pre-work
 
 1). Download and Install the [Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
