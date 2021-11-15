@@ -1,5 +1,10 @@
 # Cloud Acceleration Bootcamp - Session 7 Search and Indexing
 
+# Cloud Acceleration Bootcamp - Session 6 Pre-work
+
+1). Download and Install the [Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
+
+2). Transfer content from your AEM 6.4 to the sandbox [Assets Here](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent/assets) using the Content Transfer Tool (CTT).
 
 ## Bootcamp: Topics covered in Session 7: Search and Indexing
 
