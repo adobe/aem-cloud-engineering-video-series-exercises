@@ -1,47 +1,21 @@
-# Bootcamp - Session 3: On-Boarding
+# Hands-on exercise: Onboarding
 
-## Pre-work
+> This hands-on exercise builds on [Hands-on exercise: Migration Methodology](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration)
 
-1). Review the modernization tooling documentation [Modernization tooling documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/aem-modernization-tools.html?lang=en#introduction). 
+Now that you're able to update your existing AEM 6.x project to align with AEM as a Cloud Service best practices using AEM's modernization tools, let's take a hands-on look at the AEM as a Cloud Service onboarding process.
 
-2). Review this lab to understand additional modernization tasks [Modernization lab](https://expleague.azureedge.net/labs/L761/index.html). 
+Apply your knowledge by trying out what you learned with this hands-on exercise.
 
-3). Run the Repository Modernizer tool on the WKND Legacy project and attempt to fix the artifact issues so the modernized project will compile on 6.4. In addition, fix the run-mode issue referenced in the BPA. 
+## Supporting content 
 
-5). Review the admin console documentation  [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#aem-configuration). 
+Prior to trying the hands-on exercise, ensure you're familiar with the following topics, or review the following materials:
 
-# Cloud Acceleration Bootcamp - Session 3: Onboarding
++ [AEM as a Cloud Service and Adobe Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#aem-configuration)
++ [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/cloud-manager.html?lang=en)
++ [Onboarding](https://experienceleague-review.corp.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/onboarding.html?lang=en)
 
-## Topics Covered
+## Hands-on exercise steps
 
-### Contract, Provisioning and E-Mails
-
-This section will cover the contract provisions for AEM as a Cloud Service.
-
-### Onboarding Calls
-
-This section will provide an understanding of what to expect in an onboarding call.
-
-### Terminology
-
-This section will provide an overview of the terminology that partners should be familiar with in understanding AEM as a Cloud Service. 
-
-
-### Using the Admin Console 
-
-This session will cover the admin console and IDP as well as the roles needed for access in AEM as a Cloud Service. 
-
-### Cloud Manager for Self Service Programs and Environment Creation
-
-This session will cover Cloud Manager and how to use self service programs as well as environment creation. 
-
-
-# Cloud Acceleration Bootcamp - Session 3 Homework
-
-1). Deploy the newly modernized wknd-legacy site on the local Cloud Service SDK. Available to download here: 
-
-[Software Distribution Portal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm). 
-
-2). Configure the Admin console and explore cloud manager. 
-
-
+1. Configure your user in the Adobe Admin Console to have have full access to Adobe Cloud Manager.
+1. Login to and explore Adobe Cloud manager.
+ 
