@@ -1,53 +1,26 @@
-# Bootcamp Session 4: Cloud Manager, Develop and Deploy
+# Hands-on exercise: Cloud Manager, Develop and Deploy
 
-## Pre-work
+> This hands-on exercise builds on [Hands-on exercise: Onboarding](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session3-onboarding)
 
-1). Deploy the newly modernized site on the local SDK. 
+Now that you understand the AEM as a CLoud Service onboarding process, and how to used Adobe Admin Console to provide access to Cloud Manager and AEM as a Cloud Service, let's explore how to deploy an AEM application to AEM as a Cloud Service using Cloud Manager.
 
-2). Configure the Admin console and explore cloud manager. 
+Apply your knowledge by trying out what you learned with this hands-on exercise.
 
-## Cloud Acceleration Bootcamp -Session 4, Topics Covered
+## Supporting content 
 
-Deploy the newly modernized WKND Legacy site to the Cloud Ready SDK. 
+Prior to trying the hands-on exercise, ensure you're familiar with the following topics, or review the following materials:
 
-### Cloud Manager Overview
++ [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/cloud-manager.html?lang=en)
++ [aio CLI Cloud Manager plugin](https://github.com/adobe/aem-enablement/tree/master/AEMAsACloudService/11_CloudManager_AIO)
 
-This section will cover the differences between Cloud Service and AMS Cloud Manager. Attendees will understand what is automated, what is not, and what is coming. 
+## Hands-on exercise steps
 
-### Programs
+1. Configure your user in the Adobe Admin Console to have have full access to Adobe Cloud Manager.
+1. Login to and explore Adobe Cloud manager.
+ 
 
-This section will cover the differences between sandbox and production programs.
-
-### Using the Cloud Manager GIT
-
-This section will cover how to access, clone and commit to the Cloud Manager GIT repo. 
-
-### Deployment and Code Quality Pipelines
-
-This session will allow for discussion of the SonarQube Code quality rules. 
-
-### Onboarding a Project using Cloud Manager
-
-This section will provide a demo of onboarding a project to AEM as a Cloud Service using Cloud Manager. APIs, Cloud Service Migration using the AIO tool will also be covered. 
-
-### Cloud Manager Self Service Capabilities
-
-This session will provide an understanding of self service capabilities including environment setup, GIT accesss, KPIs, SSL cert, domain management as well as the IP allow test. Selenium testing and Google lighthouse will be addressed as well. 
-
-
-# Cloud Acceleration Bootcamp - Session 4 Homework
-
-1). Onboard the WKND-legacy project code using Cloud Manager
-
-2). Trigger a pipeline execution using the CM AIO Plugin. [Cloud Manager Plugin for the Adobe IO CLI](https://github.com/adobe/aem-enablement/tree/master/AEMAsACloudService/11_CloudManager_AIO). 
-
-3). Install the dispatcher SDK on your local system.  [Dispatcher SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
-
-4). Install the AIO-CLI-aem-cloud-service-migration plugin [Migration Plugin](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) 
-
-
-
-
-
-
-
+1. Install the aio CLI and Cloud Manager plugin, and configure it for your development Program
+1. Push the updated WKND Legacy project code to your Cloud Manager Git repository.
+1. Attach a Cloud Manager pipeline to the WKND Legacy code in Cloud Manager Git
+1. Trigger a build of the attached Cloud Manager pipeline using the Cloud Manager AIO Plugin. 
+1. Validate in both Cloud Manager and with the aio CLI Cloud Manager plugin the Cloud Manager pipeline completed
