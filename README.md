@@ -1,41 +1,27 @@
-# Bootcamp - Session 1: Introduction and Thinking Differently
+# Hands-on exercise: Introduction and Thinking Differently 
 
-## Pre-Work
+Now that you understand what AEM as a Cloud Service is, how it's different from AEM 6.x, and why its important to ensure your application aligns with AEM as a Cloud Services best practices prior to deployment, try running the Best Practice Analyzer (BPA) against the WKND Legacy project (that contains example violations) and review the BPA report.
 
-1). Read this article on development differences between Cloud Service and On-Prem/AMS:  [Differences in Developing](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing).
+Apply your knowledge by trying out what you learned with this hands-on exercise.
 
-2). Download and setup an AEM 6.4 author instance, including Java 8 and Maven. [Download AEM 6.4](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+## Supporting content 
 
-3). Clone the legacy Customer Code Repository available in the wknd-legacy branch [WKND Legacy Customer Code](https://github.com/adobe/aem-cloud-engineering-video-series-exercises).
+Prior to trying the hands-on exercise, ensure you're familiar with the following topics, or review the following materials:
 
-4). Install the legacy customer code on your local AEM 6.4 environment using Maven.
++ [What is AEM as a Cloud Service?](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
++ [Architecture of AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
++ [Thinking Differently](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/introduction.html?lang=en)
++ [Mutable and immutable content](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
++ [Differences in developing for AEM as a Cloud Service and AEM 6.x](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
++ [Best Practices Analyzer and Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.html?lang=en)
 
-5). Optional: Setup Github Desktop [Download GitHub Desktop](http://desktop.github.com).
+## Hands-on exercise steps
 
-## Cloud Acceleration Bootcamp - Topics covered Session 1: Introduction and Prep Work
-
-### Overview of Cloud Service
-
-Review of the benefits and differences of AEM as a Cloud Service versus on-prem and managed services. 
-
-### Architecture of AEM as a Cloud Service
-
-This section will provide baseline guidance for existing AEM customers to get ready and onboard for an AEM as a Cloud Service project.
-
-### Thinking Differently
-
-Cloud Service is different than other versions of AEM. In this section, these differences will be reviewed. 
-
-### Mutable versus Immutable
-
-Understanding the differences here are important to the success of any Cloud Service implementation. 
-
-
-## Cloud Acceleration Bootcamp - Homework Session 1
-
-1). Install the BPA using Package Manager. Run the BPA on the WKND Legacy Site using AEM 6.4 [Download BPA](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
-
-2). Examine the BPA report.
-
-3). Review this video to understand package structure  [Package Structure](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/repository-structure-package.html?lang=en#developing). 
-
+1. Set up a local AEM 6.4 environment on which the WKND legacy app will be installed, including Java 8 and Maven.
+    + [AEM 6.x local development set up](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)
+    + [Download AEM 6.4](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+2. Clone the legacy Customer Code Repository available in the `wknd-legacy` branch of [this Git repository](https://github.com/adobe/aem-cloud-engineering-video-series-exercises).
+3. Install the legacy WKND legacy app to your local AEM 6.4 environment using Maven.
+4. [Download and install the BPA](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=Best*+Practices*+Analyzer*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1) using Package Manager. Run the BPA on the WKND Legacy Site using AEM 6.4 [Download BPA](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
+5. Examine the BPA report in your local AEM 6.4
+6. Review this video to understand package structure [AEM project package structure](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/repository-structure-package.html?lang=en#developing). 
