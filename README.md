@@ -1,38 +1,22 @@
-# Bootcamp - Session 2: Migration Methodology
+# Hands-on exercise: Migration Methodology
 
-## Pre-Work
+> This hands-on exercise builds on [Hands-on exercise: Introduction and Thinking Differently](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session1-differently)
 
-1). Install the BPA using Package Manager. Run the BPA on the WKND Legacy Site using AEM 6.4 [Download BPA](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). 
+Now that you understand why its important to ensure your application aligns with AEM as a Cloud Services best practices and have how to run and review the Best Practices Analyzer (BPA) report, use this hands-on exercise to explore how to migrate your existing AEM 6.x application to align with AEM as a Cloud Service best practices.
 
-2). Examine the BPA report.
+Apply your knowledge by trying out what you learned with this hands-on exercise.
 
-3). Review this video to understand package structure  [Package Structure](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/repository-structure-package.html?lang=en#developing). 
+## Supporting content 
 
-## Bootcamp - Topics covered in Session 2: Best Practices and Modernization Tools
+Prior to trying the hands-on exercise, ensure you're familiar with the following topics, or review the following materials:
 
-### Review BPA Report
++ [Best Practices Analyzer and Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.html?lang=en)
++ [Mutable and immutable content](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
++ [AEM project structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
++ [AEM Modernization Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.html)
 
-This section will review the codes identified in the BPA report, and best practices for modernizing a project will be discussed. 
+## Hands-on exercise steps
 
-### Using the Cloud Acceleration Manager
-
-Understanding how the Cloud Acceleration Manager (CAM) can speed up an implementation in addition to a demo and understanding the benefits.
-
-### Discussion about Package Structure
-
-This section will discuss the differences in terms of how packages are created and used in AEM. 
-
-### The Repository Modernization tool and Maven considerations 
-
-This session will cover how the repository modernization tool can speed up a migration project, as well as the manual changes that will need to be done. 
-
-##  Cloud Acceleration Bootcamp - Session 2 Homework
-
-1). Review the modernization tooling documentation [Modernization tooling documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/aem-modernization-tools.html?lang=en#introduction). 
-
-2). Review this lab to understand additional modernization tasks [Modernization lab](https://expleague.azureedge.net/labs/L761/index.html). 
-
-3). Run the Repository Modernizer tool on the WKND Legacy project and attempt to fix the artifact issues so the modernized project will compile on 6.4. In addition, fix the run-mode issue referenced in the BPA. 
-
-4). Review the admin console documentation  [Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#aem-configuration). 
-
+1. Review the modernization tooling documentation [Modernization tooling documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/aem-modernization-tools.html?lang=en#introduction). 
+2. Review the [Modernization lab](https://expleague.azureedge.net/labs/L761/index.html) to understand additional modernization tasks.
+3. Run the Repository Modernizer tool on the WKND Legacy project and attempt to fix the artifact issues so the modernized project will compile on 6.4. In addition, fix the run-mode issue referenced in the BPA. 
