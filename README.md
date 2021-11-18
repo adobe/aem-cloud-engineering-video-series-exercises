@@ -17,8 +17,6 @@ Prior to trying the hands-on exercise, ensure you're familiar with the following
 
 1. Configure your user in the Adobe Admin Console to have have full access to Adobe Cloud Manager.
 1. Login to and explore Adobe Cloud manager.
- 
-
 1. Install the aio CLI and Cloud Manager plugin, and configure it for your development Program
 1. Push the updated WKND Legacy project code to your Cloud Manager Git repository.
 1. Attach a Cloud Manager pipeline to the WKND Legacy code in Cloud Manager Git
