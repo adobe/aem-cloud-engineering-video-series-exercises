@@ -1,6 +1,6 @@
 # Hands-on exercise: Dispatcher
 
-> This hands-on exercise builds on [Hands-on exercise: Onboarding](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session4-cloud-manager)
+> This hands-on exercise builds on [Hands-on exercise: Cloud Manager](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session4-cloud-manager)
 
 Now that you understand how the deployment process works for AEM as a Cloud Service using Cloud Manager, let's explore some of the details of how to define Dispatcher configurations and how to validate them.
 
