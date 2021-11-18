@@ -1,39 +1,25 @@
-# Cloud Acceleration Bootcamp - Session 7 Search and Indexing
+# Hands-on exercise: Search and Indexing
 
-## Cloud Acceleration Bootcamp -  Pre-work
+> This hands-on exercise builds on [Hands-on exercise: Migrating Content to AEM as a Cloud Service](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent)
 
-1). Download and Install the [Content Transfer Tool](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
+Now that you understand how to move content from AEM 6.x to AEM as a Cloud Service, let's explore how to create custom indexes to AEM as a Cloud Service.
 
-2). Transfer content from your AEM 6.4 to the sandbox [Assets Here](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session6-transfercontent/assets) using the Content Transfer Tool (CTT).
+Apply your knowledge by trying out what you learned with this hands-on exercise.
 
-## Bootcamp: Topics covered in Session 7: Search and Indexing
+## Supporting content 
 
+Prior to trying the hands-on exercise, ensure you're familiar with the following topics, or review the following materials:
 
-### Review Notable Changes
++ [Repository Modernization](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/repository-modernization.html?lang=en)
++ [Search and Indexing](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=en)
 
-This section will cover the notable changes from legacy indexes in AEM as a Cloud Service
+## Hands-on exercise steps
 
-### Transform Legacy Indexes using the Index Converter
-
-This section will cover the index converter tool and how to use it with legacy indexes. 
-
-### Transform Legacy Indexes using the Index Converter
-
-This section will cover how to deploy newly created OAK indexed to AEM as a Cloud Service. 
-
-### Troubleshooting Tips/Real World Scenarios
-
-This section will cover troubleshooting tips and a deep diver scenario into some real world use cases. 
-
-# Cloud Acceleration Bootcamp - Session 7 Homework
-
-1. Review https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#changes-in-aem-as-a-cloud-service to understand changes related to indexes in AEM as a Cloud Service
-2. Clone https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/new-index-content GIT Repository.
-3. Clone https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/sample-ethos-image GIT Repository
-4. Copy ` /new-index-content/src/main/content/jcr_root/_oak_index ` folder to the Cloud Manager GIT Project
-5. Modify the ` filter.xml ` to include the ` _oak_index ` folder
-6. Add ` <allowIndexDefinitions>true</allowIndexDefinitions> ` to ` filevault-package-maven-plugin ` plugin configuration in Parent `pom.xml`.
-7. Do a local maven build and deploy.
-8. Commit the new code with index definitions to Cloud Manager Git.
-
-
+1. [Understand changes related to indexes in AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#changes-in-aem-as-a-cloud-service)
+2. Clone [this Git repository](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/new-index-content)
+3. Clone [this Git repository](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/sample-ethos-image)
+4. Copy `/new-index-content/src/main/content/jcr_root/_oak_index` folder from the first Git repository clone to the Cloud Manager Git project
+5. Modify the `filter.xml` to include the `_oak_index  folder
+6. Add `<allowIndexDefinitions>true</allowIndexDefinitions>` to `filevault-package-maven-plugin` plugin configuration in parent `pom.xml`
+7. Do a local maven build and deploy
+8. Commit the new code with index definitions to Cloud Manager Git
