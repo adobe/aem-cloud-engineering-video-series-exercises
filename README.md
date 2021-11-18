@@ -3,7 +3,7 @@ session4-cloud-manager
 
 > This hands-on exercise builds on [Hands-on exercise: Onboarding](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session3-onboarding)
 
-Now that you understand the AEM as a CLoud Service onboarding process, and how to used Adobe Admin Console to provide access to Cloud Manager and AEM as a Cloud Service, let's explore how to deploy an AEM application to AEM as a Cloud Service using Cloud Manager.
+Now that you understand the AEM as a Cloud Service onboarding process, and how to used Adobe Admin Console to provide access to Cloud Manager and AEM as a Cloud Service, let's explore how to deploy an AEM application to AEM as a Cloud Service using Cloud Manager.
 
 Apply your knowledge by trying out what you learned with this hands-on exercise.
 
