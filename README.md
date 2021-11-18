@@ -1,50 +1,22 @@
-# Cloud Acceleration Bootcamp - Session 8 Assets and Microservices
+# Hands-on exercise:  Assets and Microservices
 
-## Pre-Work
+> This hands-on exercise builds on [Hands-on exercise: Search and Indexes](https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes)
 
-1. Review https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#changes-in-aem-as-a-cloud-service to understand changes related to indexes in AEM as a Cloud Service
+Now that you understand how to move content from AEM 6.x to AEM as a Cloud Service and index it, let's explore how AEM as a Cloud Service processes and renditions assets.
 
-2. Clone https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/new-index-content GIT Repository.
+Apply your knowledge by trying out what you learned with this hands-on exercise.
 
-3. Clone https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session7-indexes/sample-ethos-image GIT Repository
+## Supporting content 
 
-4. Copy /new-index-content/src/main/content/jcr_root/_oak_index folder to the Cloud Manager GIT Project
+Prior to trying the hands-on exercise, ensure you're familiar with the following topics, or review the following materials:
 
-5. Modify the filter.xml to include the _oak_index folder
++[Asset Compute Microservices](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.html?lang=en)
 
-6. Add <allowIndexDefinitions>true</allowIndexDefinitions> to filevault-package-maven-plugin plugin configuration in Parent pom.xml.
+## Hands-on exercise steps
 
-7. Do a local maven build and deploy.
+In this exercise, we will define a custom processing profile and apply it to an AEM assets folder.
 
-
-## Bootcamp: Topics covered in Session 8: Assets and Microservices
-
-Homework review: <br>
-Verify new index definitions are correctly deployed and being used by search queries.<br>
-Introduction <br>
-Overview<br>
-High level Architecture <br>
-What's new and notable changes<br>
-Asset Processing Options <br>
-Standard processing profiles<br>
-Custom processing profiles with project firefly<br>
-Post Processing Workflows <br>
-Asset Ingestion Use cases <br>
-aem-upload tool <br>
-aio-cli aem-upload plugin <br>
-Asset bulk ingestor tool<br>
-Session homework<br>
-Create standard and custom processing profiles<br>
-Create and utilize Asset post processing workflows<br>
-Use asset ingestion tools<br>
-
-
-
-# Cloud Acceleration Bootcamp - Session 8 Homework
-
-In this scenario, we will define a custom processing profile and apply it to an AEM assets folder.
-
-1. Navigate to Tools > Assets > Processing Profiles
+1. Navigate to __Tools > Assets > Processing Profiles__
 
  > ![1.PNG](./images/1.png)
  
@@ -94,9 +66,9 @@ To install the and use the command locally
 
 #### Upload asset binaries to AEM
 
-1. Navigate to AEM as a Cloud Service Instance.
+1. Navigate to AEM as a Cloud Service
 
-2. Go to Tools > Security > Users
+2. Go to __Tools > Security > Users__
 
 3. Create a new user, set his password and set user group to `administrators`.
 
@@ -105,10 +77,10 @@ To install the and use the command locally
 5. Open command prompt/terminal
 
 6. Run the following command
-    > aio-aem aem:upload path_to_Demo_Images_folder -h <AEM as Cloud Service Instance URL> -c username:password
+    > `aio-aem aem:upload path_to_Demo_Images_folder -h <AEM as Cloud Service Instance URL> -c username:password`
 
     e.g.
-    > aio-aem aem:upload Demo_Images -h https://author-p9357-e17906.adobeaemcloud.com -c ksaner:password
+    > `aio-aem aem:upload Demo_Images -h https://author-pXXXX-eXXXX.adobeaemcloud.com -c uploadUsers:myPassword`
 
 7. Following output should be displayed on the terminal window
 
