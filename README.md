@@ -64,6 +64,6 @@ Prior to trying the hands-on exercise, ensure you're familiar with the following
     `For Mac`<br>
     > `./bin/docker_run.sh ./out docker.for.mac.localhost:4503 8080`
 
-3. Be sure the Apache Server is started on Port 8080. 
-4. In the browser window, navigate to http://localhost:8080
-5. Onboard the WKND-legacy project code with the validated Dispatcher using Cloud Manager. Troubleshoot if needed. 
+3. Be sure the Apache Server is started on port 8080. 
+4. In the browser window, navigate to `http://localhost:8080`
+5. Onboard the WKND Legacy project code with the validated Dispatcher using Cloud Manager. Troubleshoot if needed. 
