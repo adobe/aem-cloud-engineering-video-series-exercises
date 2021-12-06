@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Content-Package-Id: my_packages:new-index
+Content-Package-Roots: /content/indexes,/oak:index/ntBaseLucene
+Content-Package-Type: content
+
